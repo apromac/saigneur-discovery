@@ -22,6 +22,7 @@
 	</properties>
 
 	<dependencies>
+		<!-- STARTER -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
@@ -58,10 +59,30 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>saigneur-discovery</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.2</version>
+				<configuration>
+					<useFile>true</useFile>
+					<includes>
+						<include>**/*Tests.java</include>
+						<include>**/*Test.java</include>
+					</includes>
+					<excludes>
+						<exclude>**/Abstract*.java</exclude>
+						<exclude>**/SaigneurDiscovery*.java</exclude>
+					</excludes>
+					<junitArtifactName>junit:junit</junitArtifactName>
+					<parallel>methods</parallel>
+					<threadCount>10</threadCount>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
