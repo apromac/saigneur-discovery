@@ -1,6 +1,6 @@
 version: "3.9"
 services:
-  docker-discovery:
+  docker-saigneur-discovery:
     image: saigneur-discovery
     container_name: msaigneur-discovery
     build:
