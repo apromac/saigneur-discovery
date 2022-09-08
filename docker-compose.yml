@@ -1,0 +1,72 @@
+version: "3.9"
+services:
+  docker-discovery:
+    image: saigneur-discovery
+    container_name: msaigneur-discovery
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "9102:9102"
+
+
+
+
+#version: "3.9"
+#services:
+#  docker-postgres:
+#    image: postgis/postgis:14-3.2
+#    container_name: msaigneur-database
+#    ports:
+#      - "5432:5432"
+#    volumes:
+#      - postgres_data:/var/lib/postgresql/data        # volume de la base de données
+#    restart: always
+#    environment:
+#      POSTGRES_PASSWORD: adminpostgres
+#    networks:
+#      - saigneur-network
+#networks:
+#  saigneur-network:
+#    external: true
+
+
+
+#network_mode: bridge
+
+
+#  docker-pgadmin:
+#    image: dpage/pgadmin4
+#    environment:
+#
+#    volumes:
+#      - pgadmin_data:/var/lib/pgadmin
+#    ports:
+#      - 5431:5431
+#    networks:
+
+
+
+
+
+
+
+#  docker-config-server:
+#    container_name: msaigneur-config-server
+#    build:
+#      dockerfile: Dockerfile
+#      context: .
+#
+#
+#networks:
+#  docker-postgres:
+#    driver: bridge
+#
+#volumes:
+#  docker-postgres:
+#  docker-pgadmin:
+
+
+#  docker-postgres:
+#    driver: local
+#    postgres_data: {}
+
