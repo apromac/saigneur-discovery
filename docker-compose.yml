@@ -15,6 +15,5 @@ services:
 
 
 networks:
-  default:
-    name: saigneur-network
-      external: true
+  saigneur-network:
+    external: true
