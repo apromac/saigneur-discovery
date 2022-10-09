@@ -12,8 +12,8 @@ config:
 # SPRING
 # ==================================================
 spring:
-#  application:
-#    name: saigneur-discovery
+  application:
+    name: saigneur-discovery
   profiles:
 #    active: dev
     active: prod
