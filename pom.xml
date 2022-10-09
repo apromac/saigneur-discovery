@@ -80,7 +80,6 @@
 						<include>**/*Test.java</include>
 					</includes>
 					<excludes>
-						<exclude>**/Abstract*.java</exclude>
 						<exclude>**/SaigneurDiscovery*.java</exclude>
 					</excludes>
 					<junitArtifactName>junit:junit</junitArtifactName>
