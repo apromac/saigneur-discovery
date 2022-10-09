@@ -8,11 +8,12 @@ services:
     ports:
       - "9102:9102"
     restart: always
-    depends_on:
-      - docker-saigneur-config-server
+    links:
+      - "docker-saigneur-config-server:saigneur-config-server"
+#    depends_on:
+#      - docker-saigneur-config-server
     networks:
       - saigneur-network
-
 
 networks:
   saigneur-network:
